@@ -1,0 +1,14 @@
+version: '3.5'
+
+volumes:
+  data:
+
+services: 
+  databese:
+    image: postgres
+    ports:
+      -5432:5432
+    environment:
+      - POSTGRES_PASSWORD=joatha
+    volumes:
+      -data:/var/lib/postgres/data
